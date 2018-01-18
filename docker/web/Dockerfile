@@ -1,4 +1,4 @@
-FROM php:apache
+FROM php:7.1-apache
 
 RUN apt-get update
 RUN apt-get install -y wget
@@ -22,4 +22,4 @@ RUN docker-php-ext-install pdo_mysql
 RUN for directory in log service snapins; do mkdir -p /opt/fog/$directory; done
 
 COPY ./fogproject/packages/web/ /var/www/html/fog/
-ADD ./docker/web/config.class.php /var/www/html/fog/lib/fog/config.class.php
+COPY ./docker/web/config.class.php /var/www/html/fog/lib/fog/
