@@ -21,5 +21,6 @@ RUN docker-php-ext-install pdo_mysql
 
 RUN for directory in log service snapins; do mkdir -p /opt/fog/$directory; done
 
+COPY ./docker/web/php.ini /usr/local/etc/php/
 COPY ./fogproject/packages/web/ /var/www/html/fog/
 COPY ./docker/web/config.class.php /var/www/html/fog/lib/fog/
