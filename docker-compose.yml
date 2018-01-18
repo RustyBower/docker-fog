@@ -10,8 +10,8 @@ services:
     image: mariadb
     restart: always
     volumes:
-      - /storage/fog/database:/var/lib/mysql
-      - /storage/fog/config/fog.sql:/docker-entrypoint-initdb.d/fog.sql
+      - ./storage/fog/database:/var/lib/mysql
+      - ./storage/fog/config/fog.sql:/docker-entrypoint-initdb.d/fog.sql
   web:
     build:
       context: .
@@ -25,5 +25,5 @@ services:
       - "443:443"
     tty: true
     volumes:
-       - /storage/fog/images:/images
-       - /storage/fog/config/.fogsettings:/opt/fog/.fogsettings
+       - ./storage/fog/images:/images
+       - ./storage/fog/config/.fogsettings:/opt/fog/.fogsettings
