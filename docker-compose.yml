@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  db:
+    environment:
+      MYSQL_USER: root
+      MYSQL_PASSWORD: password
+      MYSQL_DATABASE: fog
+      MYSQL_ROOT_PASSWORD: password
+    image: mariadb
+    restart: always
+    volumes:
+      - /storage/fog/database:/var/lib/mysql
+      - /storage/fog/config/fog.sql:/docker-entrypoint-initdb.d/fog.sql
+  web:
+    build:
+      context: .
+      dockerfile: ./docker/web/Dockerfile
+    depends_on:
+      - db
+    links:
+      - db
+    ports:
+      - "18080:80"
+      - "443:443"
+    tty: true
+    volumes:
+       - /storage/fog/images:/images
+       - /storage/fog/config/.fogsettings:/opt/fog/.fogsettings

@@ -1,0 +1,43 @@
+## Start of FOG Settings
+## Created by the FOG Installer
+## Find more information about this file in the FOG Project wiki:
+##     https://wiki.fogproject.org/wiki/index.php?title=.fogsettings
+## Version: 1.4.4
+## Install time: Wed Jan 17 19:33:09 2018
+ipaddress='172.17.0.3'
+copybackold='0'
+interface='eth0'
+submask='255.255.0.0'
+routeraddress='172.17.0.1'
+plainrouter='172.17.0.1'
+dnsaddress='8.8.8.8'
+username='fog'
+password="aaaaaaaaaaaaaaaaaa/OaLKG0JZ/lagcfxgXo="
+osid='2'
+osname='Debian'
+dodhcp='N'
+bldhcp='0'
+dhcpd=''
+blexports='1'
+installtype='N'
+snmysqluser='root'
+snmysqlpass='password'
+snmysqlhost='db'
+installlang='0'
+storageLocation='/images'
+fogupdateloaded=1
+docroot='/var/www/'
+webroot='/fog/'
+caCreated='yes'
+startrange=''
+endrange=''
+bootfilename='undionly.kpxe'
+packages='apache2 bc build-essential cpp curl g++ gawk gcc gzip htmldoc lftp libapache2-mod-php7.1 libc6 libcurl3 m4 mysql-client mysql-server net-tools nfs-kernel-server openssh-server php-gettext php7.1 php7.1-bcmath php7.1-cli php7.1-curl php7.1-fpm php7.1-gd php7.1-json php7.1-ldap php7.1-mbstring php7.1-mcrypt php7.1-mysql sysv-rc-conf tar tftp-hpa tftpd-hpa unzip vsftpd wget xinetd zlib1g'
+noTftpBuild=''
+notpxedefaultfile=''
+sslpath='/opt/fog/snapins/ssl/'
+backupPath=''
+php_ver='7.2.1'
+php_verAdds='-7.2.1'
+sslprivkey='/opt/fog/snapins/ssl/.srvprivate.key'
+## End of FOG Settings
